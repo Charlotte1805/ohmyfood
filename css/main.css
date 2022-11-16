@@ -49,12 +49,10 @@ html {
 .restaurantContainer {
   background-color: white;
   width: 100%;
-  display: inline-flex;
+
   align-items: center;
-  text-align: center;
   display: flex;
-  column-gap: 5rem;
-  margin-left: 20px;
+  justify-content: center;
 }
 
 .header__logo {
@@ -152,12 +150,12 @@ html {
 
 .loader__item--2 {
   background-color: #FF79DA;
-  animation-delay: 0.25s;
+  animation-delay: 0.5s;
 }
 
 .loader__item--3 {
   background-color: #99E2D0;
-  animation-delay: 0.5s;
+  animation-delay: 1s;
 }
 
 .localisation {
@@ -561,8 +559,8 @@ html {
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  transform: rotate(180deg);
-  transition-duration: 0.5s;
+  transform: rotate(360deg);
+  transition-duration: 1.5s;
 }
 
 .menuItem:hover .menuItem__wrapIcon {
@@ -649,6 +647,9 @@ html {
 .fa-arrow-left:before {
   content: "\f060";
   color: #353535;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 
@@ -740,5 +741,9 @@ html {
   .submenus {
     justify-content: center;
     align-items: center;
+  }
+
+  .fa-arrow-left:before {
+    top: 50px;
   }
 }
