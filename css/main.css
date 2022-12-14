@@ -39,6 +39,12 @@ body {
   scroll-behavior: smooth;
 }
 
+.header {
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+  position: relative;
+  z-index: 1000;
+}
+
 .header__logo {
   font-family: Shrikhand, "cursive";
   margin: 0;
@@ -48,23 +54,36 @@ body {
   justify-content: center;
 }
 
-.localisation {
+.group__input {
   display: flex;
   justify-content: center;
-  padding: 1.25rem 1rem;
-  background-color: #dfdddd;
-  font-size: 1.2rem;
+  padding: 1rem 1rem;
+  background-color: #e5e5e5;
   position: relative;
 }
 
-.localisation__icon {
-  margin-right: 1rem;
+.group__input input {
+  height: 100%;
+  text-align: center;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 2px;
+  padding-bottom: 0px;
+  border: none;
+  font-weight: bolder;
 }
 
-.localisation__text {
+input::placeholder {
+  color: #232323;
+  background-color: #e5e5e5;
   font-weight: 700;
   font-size: 1.2rem;
   margin: 0;
+}
+
+
+.localisation__icon {
+  margin-right: 0px;
 }
 
 .description {
@@ -150,6 +169,11 @@ body {
 .tutoriel__icon {
   margin-right: 1rem;
   color: #7e7e7e;
+
+}
+
+.tutoriel__icon:hover {
+  color: #9356DC;
 }
 
 .restaurants {
@@ -406,7 +430,7 @@ body {
 
 .menu__like {
   transition-duration: 0.25s;
-  background-color: #f6f6f6;
+  background-color: #fff;
   position: absolute;
   top: 0;
   left: 0;
@@ -597,11 +621,6 @@ body {
   color: inherit;
 }
 
-.fa-store:before {
-  content: "\f54e";
-  color: #9356DC;
-}
-
 .fa-arrow-left:before {
   content: "\f060";
   color: #353535;
@@ -613,11 +632,13 @@ body {
 @media (min-width: 768px) {
 
   .header {
-    margin: 2rem;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    padding: 20px;
+
   }
 
   .restaurantContainer {
@@ -701,7 +722,7 @@ body {
   }
 
   .fa-arrow-left:before {
-    top: 50px;
+    top: 35px;
   }
 }
 
